@@ -21,8 +21,14 @@ build_script:
 test: off
 
 deploy:
-  - provider: GitHub Releases
+  - release: CameraApp-v$(appveyor_build_version)
+    auth_token:
+      secure: 138ff167be8468c14158083365735c32233e7828
+    provider: Github
     name: CameraApp
+    artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
+    draft: false
+    prerelease: false
     on:
-      branch: master
-      appveyor_repo_tag: true
+      branch: master                 # release from master branch only
+      appveyor_repo_tag: true        # deploy on tag push only
