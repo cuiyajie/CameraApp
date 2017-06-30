@@ -20,15 +20,14 @@ build_script:
 
 test: off
 
-deploy:
-  - release: CameraApp-v$(appveyor_build_version)
-    auth_token:
-      secure: 138ff167be8468c14158083365735c32233e7828
-    provider: Github
-    name: CameraApp
-    artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
-    draft: false
-    prerelease: false
-    on:
-      branch: master                 # release from master branch only
-      appveyor_repo_tag: true        # deploy on tag push only
+environment:
+  access_token:
+    secure: ue0uX6/HSCQhoH4Xbb6nkXNsxcPpQrx7VgGjo2sfa3Ot5rn6r3/ZzQ9CK6WiROhP
+
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git config --global user.email "cuiyajie_dlut@hotmail.com "
+  - git config --global user.name "cuiyajie"
+  - git commit ...
+  - git push ...
