@@ -1,0 +1,19 @@
+{
+  "name": "camera-app",
+  "version": "1.0.0",
+  "description": "display image from camera on canvas",
+  "main": "main.js",
+  "scripts": {
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "author": "Cui Yajie",
+  "license": "ISC",
+  "build": {
+    "appId": "com.linkface.CameraApp"
+  },
+  "devDependencies": {
+    "electron": "^1.6.6",
+    "electron-builder": "^17.10.0"
+  }
+}

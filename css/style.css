@@ -1,0 +1,76 @@
+html {
+  font-family: -apple-system-font,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.setting {
+  width: 500px;
+  margin: 200px auto 0;
+  text-align: center;
+}
+
+#form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form-row + .form-row {
+  margin-top: 15px;
+}
+
+.form-row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.form-row label {
+  width: 60px;
+  text-align: right;
+  float: left;
+}
+
+.form-row .input-container {
+  margin-left: 80px;
+}
+
+.form-row input {
+  padding: 6px 10px;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+}
+
+#connect {
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+  outline: none;
+  border: 0;
+  padding: 6px 35px;
+  border-radius: 4px;
+  background-color: #FF8030;
+  color: #FFF;
+  font-size: 14px;
+}
+
+.container {
+  position: relative;
+}
+
+.container .rect {
+  position: absolute;
+  border: 1px solid red;
+}
+
+.container .score {
+  position: absolute;
+  text-align: center;
+  font-size: 12px;
+  line-height: 15px;
+  color: red;
+  bottom: -20px;
+  left: 0;
+}

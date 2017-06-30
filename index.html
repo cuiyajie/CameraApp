@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Camera App</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+     <div class="setting">
+       <h2>设置</h2>
+       <form id="form">
+         <div class="form-row">
+           <label for="ip">IP: </label>
+           <div class="input-container"><input type="text" name="ip" value="192.168.2.51"></div>
+         </div>
+         <div class="form-row">
+           <label for="port">Port: </label>
+           <div class="input-container"><input type="text" name="port" value="10086"></div>
+         </div>
+       </form>
+     </div>
+     <button id="connect">开始</button></div>
+     <div class="display" style="display: none;">
+       <div class="container" style="width: 800px; height: 450px; margin: 0 auto;">
+         <img id="screen" src="" alt="">
+       </div>
+     </div>
+     <div>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>
