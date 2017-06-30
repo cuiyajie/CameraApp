@@ -21,8 +21,8 @@ build_script:
 test: off
 
 deploy:
-  - provider: Environment
-    name: production
+  - provider: GitHub Releases
+    name: CameraApp
     on:
       branch: master
       appveyor_repo_tag: true
