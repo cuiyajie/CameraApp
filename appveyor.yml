@@ -22,8 +22,10 @@ test: off
 
 artifacts:
   - path: 'dist\**\*.exe'
+    name: CameraAppArtifact
 
 deploy:
   provider: Environment
   name: CameraApp
+  artifacts: CameraAppArtifact
 
